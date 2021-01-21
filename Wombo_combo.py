@@ -11,7 +11,7 @@ import investpy as inv
 import pandas as pd     
 import numpy as np
 
-from HRP_investing import getStdPortafoglio, getRendimentoPortafoglio, getSharpeRatio
+# from HRP_investing import getStdPortafoglio, getRendimentoPortafoglio, getSharpeRatio
 from DPCCA import compute_dpcca_others
 
 #------------------------------------------------------------------------------ 
@@ -217,8 +217,8 @@ def getCovCorr(dataframe_returns, rolling_window, corr_est_method):             
         corr = dcca
              
     cov = dataframe_returns.cov()
-    print(list(dataframe_returns.columns))
-    print("IVP", getIVP(cov))
+    print("\n", list(dataframe_returns.columns))
+    print("IVP method: ", getIVP(cov), "\n")
     # plotCorrMatrix('HRP3_corr0Stock.png', corr, labels = corr.columns)  
     return cov, corr
 # ------------------------------------------------------------------------------
@@ -274,8 +274,8 @@ def getInputMethod(input_method, lista_investing, n_asset_mkt_combo, n_asset_por
         lista_rend = pd.DataFrame(getListaRend(lista_investing))
         lista_rend_t = pd.DataFrame(lista_rend.T)     #lista trasposta per avere i titoli sulle colonne e i rendimenti sulle righe
         cov, corr = getCovCorr(lista_rend_t, rolling_window, corr_est_method)
-        print("Covariance", cov)
-        print("Correlation", corr)
+        # print("Covariance", cov)
+        # print("Correlation", corr)
         hrp = getHRP(cov, corr, linkage_method)
         std_p, rend_p, sr_p = getPortfolioInfos(hrp, cov, lista_rend_t, riskfree)   #get infos about simulated portfolio
         results = [hrp, std_p, rend_p, sr_p]
@@ -311,7 +311,7 @@ def main():
 
     #2) MAIN
     composition = getInputMethod(input_method, lista_investing, n_asset_mkt, n_asset_port, corr_est_method, linkage_method, riskfree, rolling_window)
-    print("The best composition is:", composition)
+    print("\n The best composition is (HRP%-STD-YIELD-SR): \n", composition)
                                                                                                                            
     return 
 
