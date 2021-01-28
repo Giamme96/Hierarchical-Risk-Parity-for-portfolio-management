@@ -15,10 +15,14 @@ This work is a part of my thesis (Ottimizzazione della gestione del portafoglio 
 * __lista_investing__, use the ISIN of the asset you want to add into the algo. This var is not used if the __input_method__ is _"combo"_.
 * __rolling_window__, is the size of the rolling window used into the DCCA method. This var in not used if the __corr_est_method__ is _"normale"_.
 * __riskfree__, is the yield of an arbitrary term structure used in the computation of Sharpe Ration.
-* __n_asset_port__, is referred to the number of asset you want into portfolio picked randomly (rn is not random, just the header of all title retrieved by API) in the pool of __n_asset_mkt__. 
+* __n_asset_port__, is referred to the number of asset you want into portfolio picked randomly (rn is not random, just the header of all title retrieved by API) in the pool of __n_asset_mkt__(__3__).
 
 ![Combinations](/Combination.png)
 
 * __corr_est_method__, you can choose between _"normale"_ as a classic correlation matrix estimate and _"dcca"_(__1__).
 * __input_method__, you can choose between _"investing"_ where the algo takes in input a list of asset of your choice(ISIN) or _"combo"_ representing the random way for picking assets from market.
 * __linkage_method__, i used to work with _"ward"_ method, btw you can follow different paths (https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.linkage.html)
+
+## How does it works
+After yuo set up all the variables described before the algo start working, it takes few seconds, the longest part is downloading data from API.
+* First of all the algo gives IVP composition, and then HRP composition in terms of % weight over the total budget. About the HRP output there's some easy measures like Standard Deviation, Return and Sharpe Ration. These measures are on daily basis.
