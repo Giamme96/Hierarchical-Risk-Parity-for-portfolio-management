@@ -17,6 +17,8 @@ This work is a part of my thesis (Ottimizzazione della gestione del portafoglio 
 * __riskfree__, is the yield of an arbitrary term structure used in the computation of Sharpe Ration.
 * __n_asset_port__, is referred to the number of asset you want into portfolio picked randomly (rn is not random, just the header of all title retrieved by API) in the pool of __n_asset_mkt__. 
 
+![Combinations](/Combination.png)
+
 * __corr_est_method__, you can choose between _"normale"_ as a classic correlation matrix estimate and _"dcca"_(__1__).
 * __input_method__, you can choose between _"investing"_ where the algo takes in input a list of asset of your choice(ISIN) or _"combo"_ representing the random way for picking assets from market.
 * __linkage_method__, i used to work with _"ward"_ method, btw you can follow different paths (https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.linkage.html)
