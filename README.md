@@ -10,7 +10,7 @@ This work is a part of my thesis (Ottimizzazione della gestione del portafoglio 
 
 ## First Steps
 
-![Inputs](/Input_var.png)
+![Inputs](/Input_vars.png)
 
 * __lista_investing__, use the ISIN of the asset you want to add into the algo. This var is not used if the __input_method__ is _"combo"_.
 * __rolling_window__, is the size of the rolling window used into the DCCA method. This var in not used if the __corr_est_method__ is _"normale"_.
