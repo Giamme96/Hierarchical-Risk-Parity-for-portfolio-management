@@ -8,7 +8,7 @@ This work is a part of my thesis (Ottimizzazione della gestione del portafoglio 
 
 (__2__) Data is taken from API (https://github.com/alvarobartt/investpy) facing one of the most famous financial data platform Investing (https://it.investing.com/).
 
-## First Steps
+## First Steps (Wombo_combo.py)
 
 ![Inputs](/Input_vars.png)
 
