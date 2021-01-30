@@ -24,5 +24,6 @@ This work is a part of my thesis (Ottimizzazione della gestione del portafoglio 
 * __linkage_method__, i used to work with _"ward"_ method, btw you can follow different paths (https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.linkage.html)
 
 ## How does it works
-After yuo set up all the variables described before the algo start working, it takes few seconds, the longest part is downloading data from API.
-* First of all the algo gives IVP composition, and then HRP composition in terms of % weight over the total budget. About the HRP output there's some easy measures like Standard Deviation, Return and Sharpe Ration. These measures are on daily basis.
+After you set up all the variables described before the algo start working, it takes few seconds, the longest part is downloading data from API.
+* First of all the algo gives IVP composition, and then HRP composition in terms of % weight over the total budget. About the HRP output there's some easy measures like Standard Deviation, Return and Sharpe Ratio. These measures are on daily basis.
+* There are 2 main path to follow, the main one kept in mind what kind of asstes we want to °°°°°°°°°°°°°°°°°°°°°°°°°
