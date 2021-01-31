@@ -1,6 +1,8 @@
 # Hierarchical Risk Parity for portfolio management (work in progress)
 This work is a part of my thesis (Ottimizzazione della gestione del portafoglio tramite tecniche di clustering gerarchico) in collaboration with Stefano Ferretti (https://www.unibo.it/sitoweb/s.ferretti) starting with the idea of an algorithm that can automatically develops weight's for the asset composition in an arbitrary stock portfolio. The raw algorithm was introduced for the first time by Marcos Lopez De Prado in 2016 with "Building diversified portfolios that outperform out of sample", SSRN-id2708678. A big part of the code is referred to his work, the substantial difference is regarding the correlation matrix construction (using DCCA (__1__)) and an upgrade concerning a wider option like a in-real-time stock market data(choosing a pool of assets or using random combination (__2__) and a maximisation of Sharpe Ratio as a performance measure). 
 
+## References
+
 (__1__) DCCA is a method for estimating correlation matrix holding the requirement of cross-correlation between time series.
 * "DCCA cross-correlation coefficient with sliding windows approach", E.F. Guedes, G.F. Zebende, www.elsevier.com/locate/physa.
 * "Detrending moving-average cross-correlation coefficient:Measuring cross-correlations between non-stationary series", Ladislav Kristoufek, www.elsevier.com/locate/physa.
@@ -40,9 +42,11 @@ After you set up all the variables described before the algo start working, it t
 * _DPCCA.py_ is the code regarding the DCCA process (__1__) adapted for the structure used in main files.
 * _Montecarlo.py_ is used to compute all the MC simulations and then validating the Out of Sample thesis.
 
+If you want to change the method for simulations in _Montecarlo.py_.
 ![Montecarlo_method](/Montecarlo_method.png)
 
-## The output?
+
+## The output? (Wombo_combo.py)
 
 ![HRP_out](/HRP_output.png)
 ![IVP_out](/IVP_output.png)
