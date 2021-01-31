@@ -42,3 +42,5 @@ After you set up all the variables described before the algo start working, it t
 
 ![Montecarlo_method](/Montecarlo_method.png)
 
+## The output?
+
