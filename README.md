@@ -44,3 +44,6 @@ After you set up all the variables described before the algo start working, it t
 
 ## The output?
 
+![HRP_out](/HRP_output.png)
+![IVP_out](/IVP_output.png)
+
